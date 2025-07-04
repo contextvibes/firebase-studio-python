@@ -1,12 +1,8 @@
-# Contributing to Go Starter Templates
+# Contributing to Python Starter Templates
 
 First off, thank you for considering contributing! Your help is essential for making these templates better for everyone.
 
 This document provides guidelines for contributing to this project. Please feel free to propose changes to this document in a pull request.
-
-## Community Guidelines
-
-We strive to maintain a positive and welcoming environment. All participants are expected to act professionally and respectfully toward others. Please see the Code of Conduct section in the main `README.md`.
 
 ## How Can I Contribute?
 
@@ -14,7 +10,7 @@ There are many ways to contribute, from writing tutorials or blog posts, improvi
 
 ### Submitting Issues
 
-If you find a bug or have a feature request, please [open an issue](https://github.com/contextvibes/firebase-studio-go/issues) on GitHub. Please provide as much detail as possible to help us understand and address the issue effectively.
+If you find a bug or have a feature request, please [open an issue](https://github.com/contextvibes/firebase-studio-python/issues) on GitHub. Please provide as much detail as possible to help us understand and address the issue effectively.
 
 ## Development Workflow
 
@@ -54,8 +50,8 @@ If you prefer not to use the automation, that's perfectly fine. Please follow th
 
 2.  **Test and Analyze:** Run the checks manually.
     ```bash
-    go test -v -cover ./...
-    golangci-lint run
+    pytest
+    flake8 .
     ```
 
 3.  **Write Your Commit Message:** We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This is important for our release process.
