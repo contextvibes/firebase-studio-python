@@ -1,0 +1,10 @@
+# factory/tasks/_test.yml
+version: '3'
+tasks:
+  test:
+    desc: "ACTION: Runs automated tests using language-appropriate frameworks."
+    long: "Runs a script that provides a menu to select the desired test suite and then executes it for all Go modules found in the project."
+    silent: true
+    cmds:
+      - chmod +x ./factory/scripts/test.sh
+      - ./factory/scripts/test.sh {{.CLI_ARGS}}

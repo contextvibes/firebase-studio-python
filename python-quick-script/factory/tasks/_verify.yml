@@ -1,0 +1,12 @@
+# factory/tasks/_verify.yml
+version: '3'
+tasks:
+  verify:
+    desc: "VIEW: Runs an automated health check on all provisioned GCP infrastructure."
+    long: "This task executes a script that verifies the existence and configuration of all required GCP projects, APIs, resources, and IAM permissions."
+    silent: true
+    # The .env file is required by the script for all the GCP variable names.
+    # The root Taskfile loads this automatically.
+    cmds:
+      - chmod +x ./factory/scripts/verify.sh
+      - ./factory/scripts/verify.sh {{.CLI_ARGS}}
