@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Firebase Template Manifest Schema",
+    "description": "Defines the structure for a THEA-compliant Firebase Studio project template manifest file. *(This is a placeholder. Content to be added by Logos, reviewed by Orion/Sparky.)*",
+    "type": "object",
+    "properties": {
+        "templateVersion": {
+            "type": "string",
+            "description": "Version of this template manifest schema."
+        },
+        "theaGuidanceVersion": {
+            "type": "string",
+            "description": "Minimum version of THEA guidance this template is aligned with."
+        },
+        "templateName": {
+            "type": "string",
+            "description": "Display name of the Firebase Studio template."
+        },
+        "templateDescription": {
+            "type": "string",
+            "description": "A brief description of what the template provides."
+        },
+        "targetDomain": {
+            "type": "string",
+            "description": "The primary domain of the template (e.g., 'Go Backend', 'Python Data Science', 'Flutter App')."
+        },
+        "embeddedAirulesPath": {
+            "type": "string",
+            "description": "Path within the template to its embedded .idx/airules.md file.",
+            "default": ".idx/airules.md"
+        }
+        // Add other necessary manifest properties here
+    },
+    "required": [
+        "templateVersion",
+        "theaGuidanceVersion",
+        "templateName",
+        "templateDescription",
+        "targetDomain"
+    ]
+}

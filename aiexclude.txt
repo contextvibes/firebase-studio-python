@@ -1,0 +1,39 @@
+# .aiexclude
+# Exclude files/directories from Gemini Code Assist indexing.
+# Syntax is the same as .gitignore.
+
+# --- Secrets ---
+# WHY: NEVER index actual secrets or environment files containing secrets.
+# This is the most important security consideration for AI context.
+.env
+sa-key.json
+*.pem
+*.key
+*.p12
+
+# --- Generated Binaries & Artifacts ---
+# WHY: Compiled binaries are not source code and provide no value for analysis.
+bin/
+# Test coverage output is transient.
+coverage.out
+coverage.html
+
+# --- Logs & Generated Reports ---
+# WHY: Runtime logs and the AI's own generated context reports should not be
+# indexed recursively. This new, broader rule covers all variations.
+*.log
+crash.*.log
+context_*.log
+context_*.md
+
+# --- Tooling Cache ---
+# WHY: The Go Task cache is irrelevant metadata for code generation.
+.task/
+
+# --- Temporary / OS Files ---
+.DS_Store
+Thumbs.db
+.direnv/
+
+# --- Non-Code / Potentially Irrelevant Files ---
+notes.txt

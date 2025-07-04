@@ -1,0 +1,14 @@
+# factory/tasks/_destroy.yml
+version: '3'
+tasks:
+  destroy:
+    desc: "ACTION: Permanently destroys ALL associated GCP projects after multiple confirmations."
+    long: |
+      Runs a heavily guarded script to delete all project infrastructure.
+      It will require you to type each project ID to confirm deletion.
+      This action is irreversible and will result in data loss.
+    silent: true
+    # This task requires the project IDs from the .env file.
+    cmds:
+      - chmod +x ./factory/scripts/destroy.sh
+      - ./factory/scripts/destroy.sh {{.CLI_ARGS}}

@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "THEA Artifact Metadata Schema",
+    "description": "Defines the standard metadata front matter for all versioned artifacts within the THEA project.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "A unique, machine-readable identifier for the artifact, typically in the format 'type:path/to/artifact'.",
+            "type": "string"
+        },
+        "fileExtension": {
+            "description": "The file extension of the artifact (e.g., 'md', 'json').",
+            "type": "string"
+        },
+        "title": {
+            "description": "The human-readable title of the artifact.",
+            "type": "string"
+        },
+        "artifactVersion": {
+            "description": "The semantic version of the artifact itself (not the project).",
+            "type": "string"
+        },
+        "status": {
+            "description": "The current lifecycle status of the artifact.",
+            "type": "string",
+            "enum": [
+                "Draft",
+                "Proposed",
+                "Active",
+                "Deprecated",
+                "Archived"
+            ],
+            "default": "Draft"
+        },
+        "summary": {
+            "description": "A brief, one-sentence summary of the artifact's purpose.",
+            "type": "string"
+        },
+        "usageGuidance": {
+            "description": "A list of strings providing guidance on how or when to use this artifact.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "owner": {
+            "description": "The conceptual persona or role primarily responsible for this artifact.",
+            "type": "string"
+        },
+        "createdDate": {
+            "description": "The ISO 8601 date-time when the artifact was created.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "lastModifiedDate": {
+            "description": "The ISO 8601 date-time when the artifact was last modified.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "tags": {
+            "description": "A list of relevant keywords for filtering and discovery.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "id",
+        "fileExtension",
+        "title",
+        "artifactVersion",
+        "status",
+        "summary"
+    ]
+}

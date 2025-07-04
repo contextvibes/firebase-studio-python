@@ -1,0 +1,11 @@
+# factory/tasks/_run.yml
+version: '3'
+tasks:
+  run:
+    desc: "ACTION: Runs the application using the appropriate interpreter or binary."
+    long: "Runs a script that provides a menu of different ways to execute the application, from local source to triggering a remote Cloud Run job."
+    silent: true
+    # The .env file, loaded by the root Taskfile, is required by the script.
+    cmds:
+      - chmod +x ./factory/scripts/run.sh
+      - ./factory/scripts/run.sh {{.CLI_ARGS}}

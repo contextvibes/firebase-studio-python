@@ -1,0 +1,10 @@
+# factory/tasks/_provision.yml
+version: '3'
+tasks:
+  provision:
+    desc: "GUIDE: Displays a dynamic checklist for provisioning all required cloud infrastructure."
+    long: "Runs a script that checks for necessary environment variables and displays a step-by-step guide for manual setup."
+    silent: true
+    cmds:
+      - chmod +x ./factory/scripts/provision.sh
+      - ./factory/scripts/provision.sh {{.CLI_ARGS}}

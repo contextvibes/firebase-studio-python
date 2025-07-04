@@ -1,0 +1,22 @@
+{
+  "name": "Python Quick Script",
+  "description": "Bootstrap a simple Python script with a main function.",
+  "categories": [
+    "Scripting",
+    "Python"
+  ],
+  "icon": "https://www.gstatic.com/monospace/v1/project_icons/icon_python.svg",
+  "publisher": "Context Vibes",
+  "params": [
+    {
+      "id": "environment",
+      "name": "Template Choice",
+      "type": "enum",
+      "default": "python-quick-script",
+      "options": {
+        "python-quick-script": "Simple Python Script"
+      },
+      "required": true
+    }
+  ]
+}
